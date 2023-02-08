@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./assets/js/principles.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script defer src="./assets/fontawesome/js/solid.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen bg-slate-50">
+      <header class="bg-slate-50">
+        <div
+          class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
+        >
+          <a href="/">
+            <img
+              class="h-4 md:h-6"
+              src="./assets/imgs/icons/logo-dark.svg"
+              alt="Logo"
+            />
+          </a>
+          <ul class="hidden gap-5 sm:flex">
+            <li><a href="/#promos">Акции</a></li>
+            <li><a href="/#search">Поиск</a></li>
+            <li><a href="/register.html">Регистрация</a></li>
+            <li><a href="/login.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+      </header>
+      <main
+        class="flex flex-col gap-8 overflow-auto grow md:gap-16 text-slate-900"
+      >
+        <section
+          class="flex-none text-slate-200 lg:h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+        >
+          <div
+            class="container relative h-full px-6 py-8 mx-auto md:px-12 md:py-16"
+          >
+            <div
+              class="relative flex flex-col items-center w-full h-full gap-y-10 lg:flex-row gap-x-8"
+            >
+              <div class="absolute bottom-0 hidden w-6/12 h-3/6 lg:block">
+                <img
+                  id="big-car"
+                  src="./assets/imgs/cars/kia__rio.png"
+                  class="object-contain object-right-bottom w-full h-full -scale-x-100"
+                  alt=""
+                />
+              </div>
+              <div class="relative flex-none lg:w-7/12 lg:h-full relatie">
+                <div class="flex flex-col gap-5 lg:w-min md:gap-10">
+                  <div
+                    class="text-3xl font-medium sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap w-fit"
+                  >
+                    <div
+                      class="font-bold text-transparent from-slate-50 to-slate-300 bg-clip-text bg-gradient-to-br"
+                    >
+                      Владей поездкой,
+                    </div>
+                    <div>а не автомобилем</div>
+                  </div>
+                  <div class="text-lg md:text-xl text-slate-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos impedit reiciendis ullam quos aspernatur nulla.
+                  </div>
+                </div>
+              </div>
+              <div class="relative flex flex-col w-full gap-5">
+                <div
+                  class="border-2 rounded-md border-slate-500 text-slate-200"
+                >
+                  <div class="px-3 py-2.5 flex flex-col gap-3">
+                    <div class="flex flex-col">
+                      <div class="text-xl font-bold md:text-3xl">Выбери</div>
+                      <div class="text-lg">подходящее авто</div>
+                    </div>
+                    <div class="grid gap-2 xl:grid-flow-col">
+                      <label
+                        for="economy"
+                        class="relative border rounded-md cursor-pointer border-slate-500 hover:border-slate-300 peer-checked:bg-slate-100"
+                      >
+                        <input
+                          checked
+                          type="radio"
+                          name="car"
+                          id="economy"
+                          value="economy"
+                          class="hidden peer"
+                          onchange="onCarPick(this.value)"
+                        />
+                        <div
+                          class="absolute w-full h-full opacity-0 bg-slate-100 peer-checked:opacity-10"
+                        ></div>
+                        <div class="flex items-center h-full gap-3 px-3 py-2.5">
+                          <img
+                            src="./assets/imgs/cars/kia__rio.png"
+                            alt="economy"
+                            class="w-12"
+                          />
+                          <div class="text-xl font-medium leading-4">
+                            Эконом
+                          </div>
+                        </div>
+                      </label>
+                      <label
+                        for="economy-plus"
+                        class="relative border rounded-md cursor-pointer border-slate-500 hover:border-slate-300 peer-checked:bg-slate-100"
+                      >
+                        <input
+                          type="radio"
+                          name="car"
+                          id="economy-plus"
+                          value="economyPlus"
+                          class="hidden peer"
+                          onchange="onCarPick(this.value)"
+                        />
+                        <div
+                          class="absolute w-full h-full opacity-0 bg-slate-100 peer-checked:opacity-10"
+                        ></div>
+                        <div class="flex items-center h-full gap-3 px-3 py-2.5">
+                          <img
+                            src="./assets/imgs/cars/volkswagen__polo.png"
+                            alt="economy-plus"
+                            class="w-12"
+                          />
+                          <div class="text-xl font-medium leading-4">
+                            Эконом+
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="border-2 rounded-md border-slate-500 text-slate-200"
+                >
+                  <div class="px-3 py-2.5 flex flex-col gap-3">
+                    <div class="flex flex-col">
+                      <div class="text-xl font-bold md:text-3xl">Получай</div>
+                      <div class="text-lg">бонусные баллы</div>
+                    </div>
+                    <div
+                      class="relative flex items-center justify-center h-full overflow-hidden rounded-md px-3 py-2.5"
+                    >
+                      <div
+                        class="absolute w-full h-full bg-slate-100 opacity-10"
+                      ></div>
+                      <div class="text-center">
+                        <div id="bonuses-gained" class="text-4xl font-bold">
+                          0
+                        </div>
+                        <div>бонусов за поездку</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="border-2 rounded-md border-slate-500 text-slate-200"
+                >
+                  <div class="px-3 py-2.5 flex flex-col gap-3">
+                    <div class="flex flex-col">
+                      <div class="text-xl font-bold md:text-3xl">Дешевле</div>
+                      <div class="text-lg">за баллы</div>
+                    </div>
+                    <div
+                      class="relative flex items-center justify-center h-full overflow-hidden rounded-md px-3 py-2.5"
+                    >
+                      <div
+                        class="absolute w-full h-full bg-slate-100 opacity-10"
+                      ></div>
+                      <div class="text-lg text-center">
+                        Используй бонусы на следующую поездку
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="flex flex-col gap-8 px-2 mx-auto container-md md:px-4">
+          <div class="text-3xl font-bold md:text-5xl">Почему мы?</div>
+          <div class="grid gap-5 xl:grid-flow-col auto-cols-fr">
+            <div
+              class="relative overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <div class="relative flex flex-col gap-5 p-5">
+                <div class="flex items-center gap-3">
+                  <i
+                    class="p-3 text-2xl duration-75 rounded-md fa-solid fa-car from-slate-200 to-slate-300 text-slate-700 bg-gradient-to-br"
+                  ></i>
+                  <div class="text-3xl font-medium text-slate-900">
+                    Большой парк
+                  </div>
+                </div>
+                <div class="text-lg text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Minima a beatae nesciunt, nulla placeat, possimus quasi
+                  architecto et doloremque non est voluptate fuga cupiditate?
+                  Quidem placeat eos aut recusandae minima.
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <div class="relative flex flex-col gap-5 p-5">
+                <div class="flex items-center gap-3">
+                  <i
+                    class="p-3 text-2xl duration-75 rounded-md fa-solid fa-car from-slate-200 to-slate-300 text-slate-700 bg-gradient-to-br"
+                  ></i>
+                  <div class="text-3xl font-medium text-slate-900">
+                    Большой парк
+                  </div>
+                </div>
+                <div class="text-lg text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Minima a beatae nesciunt, nulla placeat, possimus quasi
+                  architecto et doloremque non est voluptate fuga cupiditate?
+                  Quidem placeat eos aut recusandae minima.
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <div class="relative flex flex-col gap-5 p-5">
+                <div class="flex items-center gap-3">
+                  <i
+                    class="p-3 text-2xl duration-75 rounded-md fa-solid fa-car from-slate-200 to-slate-300 text-slate-700 bg-gradient-to-br"
+                  ></i>
+                  <div class="text-3xl font-medium text-slate-900">
+                    Большой парк
+                  </div>
+                </div>
+                <div class="text-lg text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Minima a beatae nesciunt, nulla placeat, possimus quasi
+                  architecto et doloremque non est voluptate fuga cupiditate?
+                  Quidem placeat eos aut recusandae minima.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="search" class="px-2 mx-auto container-md md:px-4">
+          <div
+            class="flex flex-col gap-8 p-4 rounded-md shadow-lg md:p-8 from-slate-200 to-slate-300 bg-gradient-to-br"
+          >
+            <div class="text-3xl font-semibold md:text-4xl">
+              Найди <span class="font-bold">свою</span> машину
+            </div>
+            <form class="grid gap-4" onsubmit="goSearch(); return false">
+              <div class="flex flex-col gap-2">
+                <label for="from">Откуда</label>
+                <input
+                  required
+                  class="p-2 text-sm border rounded-md bg-slate-100 border-slate-300 text-slate-900 focus-visible:outline-none focus:ring-slate-500 focus:border-slate-500"
+                  type="text"
+                  id="from"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="date">Дата</label>
+                <input
+                  class="p-2 text-sm border rounded-md bg-slate-100 border-slate-300 text-slate-900 focus-visible:outline-none focus:ring-slate-500 focus:border-slate-500"
+                  type="date"
+                  id="date"
+                />
+              </div>
+              <div
+                class="flex flex-col justify-between gap-5 md:items-end md:flex-row"
+              >
+                <div class="flex flex-col gap-2">
+                  <div>Марка автомобиля</div>
+                  <div class="flex flex-col gap-2 md:flex-row">
+                    <label
+                      for="search-economy"
+                      class="relative border rounded-md cursor-pointer border-slate-400 hover:border-slate-500"
+                    >
+                      <input
+                        checked
+                        type="radio"
+                        name="search-car"
+                        id="search-economy"
+                        value="search-economy"
+                        class="hidden peer"
+                      />
+                      <div
+                        class="absolute w-full h-full opacity-0 bg-slate-900 peer-checked:opacity-10"
+                      ></div>
+                      <div class="flex items-center h-full gap-3 px-3 py-2.5">
+                        <img
+                          src="./assets/imgs/cars/kia__rio.png"
+                          alt="economy"
+                          class="w-12"
+                        />
+                        <div class="text-xl font-medium leading-4">Эконом</div>
+                      </div>
+                    </label>
+                    <label
+                      for="search-economy-plus"
+                      class="relative border rounded-md cursor-pointer border-slate-400 hover:border-slate-500"
+                    >
+                      <input
+                        type="radio"
+                        name="search-car"
+                        id="search-economy-plus"
+                        value="economyPlus"
+                        class="hidden peer"
+                      />
+                      <div
+                        class="absolute w-full h-full opacity-0 bg-slate-900 peer-checked:opacity-10"
+                      ></div>
+                      <div class="flex items-center h-full gap-3 px-3 py-2.5">
+                        <img
+                          src="./assets/imgs/cars/volkswagen__polo.png"
+                          alt="economy-plus"
+                          class="w-12"
+                        />
+                        <div class="text-xl font-medium leading-4">Эконом+</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <a href="/search.html">
+                  <button
+                    class="relative w-full overflow-hidden rounded-md text-slate-50 group"
+                  >
+                    <div
+                      class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                    ></div>
+                    <div
+                      class="absolute w-full h-full opacity-0 bg-slate-50 group-hover:opacity-10"
+                    ></div>
+                    <div class="relative px-3 py-2">Найти</div>
+                  </button>
+                </a>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section
+          id="promos"
+          class="flex flex-col gap-8 px-2 mx-auto container-md md:px-4"
+        >
+          <div class="text-3xl font-bold md:text-5xl">Акции</div>
+          <div class="grid gap-5 xl:grid-cols-3">
+            <article
+              class="relative flex overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <img
+                src="https://api.lorem.space/image/car?w=450&h=450"
+                alt=""
+                class="relative object-cover w-1/3 h-full group-hover:w-2/5"
+              />
+              <div class="relative flex flex-col justify-between gap-5 p-5">
+                <div class="flex flex-col gap-5">
+                  <div class="text-3xl font-medium">Акция</div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit, nobis?
+                  </div>
+                </div>
+                <button
+                  class="relative overflow-hidden rounded-md text-slate-50 group/button"
+                >
+                  <div
+                    class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                  ></div>
+                  <div
+                    class="absolute w-full h-full opacity-0 bg-slate-50 group-hover/button:opacity-10"
+                  ></div>
+                  <div class="relative px-3 py-2">Подробнее</div>
+                </button>
+              </div>
+            </article>
+            <article
+              class="relative flex overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <img
+                src="https://api.lorem.space/image/car?w=450&h=450"
+                alt=""
+                class="relative object-cover w-1/3 h-full group-hover:w-2/5"
+              />
+              <div class="relative flex flex-col justify-between gap-5 p-5">
+                <div class="flex flex-col gap-5">
+                  <div class="text-3xl font-medium">Акция</div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit, nobis?
+                  </div>
+                </div>
+                <button
+                  class="relative overflow-hidden rounded-md text-slate-50 group/button"
+                >
+                  <div
+                    class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                  ></div>
+                  <div
+                    class="absolute w-full h-full opacity-0 bg-slate-50 group-hover/button:opacity-10"
+                  ></div>
+                  <div class="relative px-3 py-2">Подробнее</div>
+                </button>
+              </div>
+            </article>
+            <article
+              class="relative flex overflow-hidden border-2 rounded-md group border-slate-300"
+            >
+              <div
+                class="absolute w-full h-full opacity-0 from-slate-200 to-slate-300 bg-gradient-to-br group-hover:opacity-100"
+              ></div>
+              <img
+                src="https://api.lorem.space/image/car?w=450&h=450"
+                alt=""
+                class="relative object-cover w-1/3 h-full group-hover:w-2/5"
+              />
+              <div class="relative flex flex-col justify-between gap-5 p-5">
+                <div class="flex flex-col gap-5">
+                  <div class="text-3xl font-medium">Акция</div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit, nobis?
+                  </div>
+                </div>
+                <button
+                  class="relative overflow-hidden rounded-md text-slate-50 group/button"
+                >
+                  <div
+                    class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                  ></div>
+                  <div
+                    class="absolute w-full h-full opacity-0 bg-slate-50 group-hover/button:opacity-10"
+                  ></div>
+                  <div class="relative px-3 py-2">Подробнее</div>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="text-xl font-medium xl:text-3xl">
+              Не пропусти новые акции
+            </div>
+            <form
+              action=""
+              class="flex flex-col gap-x-5 gap-y-3 md:flex-row md:items-end"
+            >
+              <div class="flex flex-col gap-2 grow">
+                <label for="email">Электронная почта</label>
+                <input
+                  required
+                  class="p-2 text-sm border rounded-md bg-slate-100 border-slate-300 text-slate-900 focus-visible:outline-none focus:ring-slate-500 focus:border-slate-500"
+                  type="email"
+                  id="email"
+                />
+              </div>
+              <button
+                type="submit"
+                class="relative overflow-hidden rounded-md h-min text-slate-50 group/button"
+              >
+                <div
+                  class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                ></div>
+                <div
+                  class="absolute w-full h-full opacity-0 bg-slate-50 group-hover/button:opacity-10"
+                ></div>
+                <div class="relative px-3 py-2">Подписаться</div>
+              </button>
+            </form>
+          </div>
+        </section>
+        <footer
+          class="text-slate-50 from-slate-800 to-slate-900 bg-gradient-to-br"
+        >
+          <div
+            class="container flex flex-col gap-5 px-6 py-8 mx-auto md:px-12 md:py-16"
+          >
+            <div class="flex items-end justify-between gap-5 sm:justify-start">
+              <img
+                class="h-4 md:h-6 filter"
+                src="./assets/imgs/icons/logo-light.svg"
+                alt="Logo"
+              />
+              <div class="text-xs">
+                <a href="tel:+78000000000">8 (800) 000 00-00</a>
+              </div>
+            </div>
+            <div
+              class="grid justify-between gap-2 p-2 text-lg md:grid-flow-col md:gap-5 container-md"
+            >
+              <div class="flex flex-col">
+                <a href="" class="font-bold">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="" class="font-bold">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="" class="font-bold">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="" class="font-bold">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+                <a href="" class="">Вакансии</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/seat.css" />
+    <script defer src="./assets/fontawesome/js/solid.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
+    <script defer src="./assets/js/card-bg.js"></script>
+    <script defer src="./assets/js/seat.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen bg-slate-200">
+      <header class="bg-slate-50">
+        <div
+          class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
+        >
+          <a href="/">
+            <img
+              class="h-4 md:h-6"
+              src="./assets/imgs/icons/logo-dark.svg"
+              alt="Logo"
+            />
+          </a>
+          <ul class="hidden gap-5 sm:flex">
+            <li><a href="/#promos">Акции</a></li>
+            <li><a href="/#search">Поиск</a></li>
+            <li><a href="/register.html">Регистрация</a></li>
+            <li><a href="/login.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="overflow-auto grow sm:px-10 md:px-20">
+        <div
+          class="flex flex-col min-h-full gap-8 px-5 py-10 mx-auto container-xs"
+        >
+          <div class="text-3xl font-bold sm:text-4xl">Выбор автомобиля</div>
+          <div
+            class="flex flex-col-reverse gap-8 px-3 py-2 rounded-lg shadow-lg justify-evenly 2xl:flex-row bg-slate-50 lg:px-6 lg:py-4"
+          >
+            <div class="relative flex-none">
+              <div
+                id="confirm"
+                class="sticky top-0 z-10 flex flex-col hidden w-full md:absolute h-fit md:h-full justify-evenly"
+              >
+                <div
+                  class="flex flex-col w-full h-full gap-5 p-5 rounded-md shadow-2xl from-slate-300 to-slate-400 bg-gradient-to-br"
+                >
+                  <div class="text-3xl font-medium">Вы выбираете</div>
+                  <div class="flex flex-col justify-center h-full gap-3">
+                    <div class="flex flex-col items-center gap-2">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo.png"
+                        alt=""
+                        class="w-2/3"
+                      />
+                      <div class="text-2xl">
+                        <span class="font-bold">Volkswagen</span>
+                        <span class="font-medium">Polo</span>
+                      </div>
+                      <div class="flex gap-3 text-xl">
+                        <div
+                          class="flex gap-2 px-2 py-1 border-2 rounded-md border-slate-500"
+                        >
+                          <div>С065МК</div>
+                          <div class="h-full border-l border-slate-500"></div>
+                          <div>78</div>
+                        </div>
+                        <div
+                          class="px-3 py-1 rounded-md from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50"
+                        >
+                          A102
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-flow-col gap-5">
+                    <button
+                      class="px-3 py-2 border-2 rounded-md border-slate-500"
+                      onclick="goBack()"
+                    >
+                      Назад
+                    </button>
+                    <button
+                      class="px-3 py-2 rounded-md text-slate-50 from-slate-800 to-slate-900 bg-gradient-to-br"
+                    >
+                      Продолжить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-1 grid-rows-2 p-1 mx-auto sm:grid-cols-2 gap-x-6 md:gap-x-20 gap-y-10 w-fit"
+              >
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="px-3.5 py-3 rounded-md font-medium text-slate-600 bg-slate-200 w-fit"
+                  >
+                    A1
+                  </div>
+                  <div
+                    class="grid grid-cols-[repeat(2,_7rem)] grid-rows-[repeat(3,_3rem)] gap-1 py-1 w-fit bg-slate-300"
+                  >
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer -scale-x-100 drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="px-3.5 py-3 rounded-md font-medium text-slate-600 bg-slate-200 w-fit"
+                  >
+                    A2
+                  </div>
+                  <div
+                    class="grid grid-cols-[repeat(2,_7rem)] grid-rows-[repeat(3,_3rem)] gap-1 py-1 w-fit bg-slate-300"
+                  >
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer -scale-x-100 drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="px-3.5 py-3 rounded-md font-medium text-slate-600 bg-slate-200 w-fit"
+                  >
+                    A3
+                  </div>
+                  <div
+                    class="grid grid-cols-[repeat(2,_7rem)] grid-rows-[repeat(3,_3rem)] gap-1 py-1 w-fit bg-slate-300"
+                  >
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer -scale-x-100 drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="px-3.5 py-3 rounded-md font-medium text-slate-600 bg-slate-200 w-fit"
+                  >
+                    A4
+                  </div>
+                  <div
+                    class="grid grid-cols-[repeat(2,_7rem)] grid-rows-[repeat(3,_3rem)] gap-1 py-1 w-fit bg-slate-300"
+                  >
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer -scale-x-100 drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50"></div>
+                    <div class="px-1.5 py-1 bg-slate-50">
+                      <img
+                        src="./assets/imgs/cars/volkswagen__polo__top.png"
+                        alt=""
+                        class="h-full mx-auto cursor-pointer drop-shadow-md"
+                        onclick="goConfirm()"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden rounded-md group from-slate-800 to-slate-900 bg-gradient-to-br"
+            >
+              <div class="absolute w-full h-full">
+                <div id="card-meta_1" class="hidden card-meta">
+                  <div class="brand">Аэропорт</div>
+                  <div class="model">Шереметьево</div>
+                </div>
+                <div
+                  id="bg-card_1"
+                  class="absolute text-5xl italic font-black uppercase -rotate-45 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 whitespace-nowrap text-slate-800 top-1/2 left-1/2"
+                ></div>
+              </div>
+              <div
+                class="relative flex flex-col items-center h-full gap-4 p-5 justify-evenly text-slate-50"
+              >
+                <div class="text-xl font-bold text-center md:text-3xl">
+                  Аэропорт Шереметьево
+                </div>
+                <div
+                  class="flex flex-col items-center w-full gap-2 overflow-hidden"
+                >
+                  <div
+                    class="relative flex items-center text-xl md:text-2xl text-slate-300"
+                  >
+                    <div class="absolute flex gap-3 pr-4 right-full">
+                      <div class="cursor-pointer hover:text-slate-100">1</div>
+                    </div>
+                    <div
+                      class="px-2 pb-1 text-3xl font-bold border-2 rounded-md md:text-4xl text-slate-50 border-slate-400"
+                    >
+                      2
+                    </div>
+                    <div class="absolute flex gap-3 pl-4 left-full">
+                      <div class="cursor-pointer hover:text-slate-100">3</div>
+                      <div class="cursor-pointer hover:text-slate-100">4</div>
+                      <div class="cursor-pointer hover:text-slate-100">5</div>
+                      <div class="cursor-pointer hover:text-slate-100">6</div>
+                    </div>
+                  </div>
+                  <div class="text-sm">Этаж</div>
+                </div>
+                <div
+                  class="flex flex-col items-center w-full gap-2 overflow-hidden"
+                >
+                  <div>
+                    <button
+                      class="flex items-center gap-3 px-3 py-2 border-2 rounded-md border-slate-400"
+                    >
+                      <div id="zone" class="text-xl font-bold md:text-3xl">
+                        A1 – A4
+                      </div>
+                      <i class="md:text-2xl fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="text-sm">Зона</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

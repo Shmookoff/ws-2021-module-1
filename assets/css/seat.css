@@ -1,0 +1,31 @@
+@keyframes seat-confirmation {
+    from {
+        opacity: 0%;
+        margin-top: -1rem;
+    }
+    to {
+        opacity:100%;
+        margin-top: 0;
+    }
+}
+@keyframes seat-confirmation-out {
+    from {
+        opacity:100%;
+        margin-top: 0;
+
+    }
+    to {
+        opacity: 0%;
+        margin-top: -1rem;
+    }
+}
+
+.seat-confirmation-in {
+    animation-name: seat-confirmation;
+    animation-duration: 300ms;
+}
+.seat-confirmation-out {
+    animation-name: seat-confirmation-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}

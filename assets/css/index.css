@@ -1,0 +1,30 @@
+@keyframes big-car-in {
+    from {
+        opacity: 0%;
+        margin-left: -1rem;
+    }
+    to {
+        opacity: 100%;
+        margin-left: 0;
+    }
+}
+@keyframes big-car-out {
+    from {
+        opacity: 100%;
+        margin-left: 0;
+    }
+    to {
+        opacity: 0%;
+        margin-left: -1rem;
+    }
+}
+
+.big-car-in {
+    animation-name: big-car-in;
+    animation-duration: 300ms;
+}
+.big-car-out {
+    animation-name: big-car-out;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script defer src="./assets/fontawesome/js/solid.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
+    <script defer src="./assets/js/card-bg.js"></script>
+    <script defer src="./assets/js/search.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen bg-slate-200">
+      <header class="bg-slate-50">
+        <div
+          class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
+        >
+          <a href="/">
+            <img
+              class="h-4 md:h-6"
+              src="./assets/imgs/icons/logo-dark.svg"
+              alt="Logo"
+            />
+          </a>
+          <ul class="hidden gap-5 sm:flex">
+            <li><a href="/#promos">Акции</a></li>
+            <li><a href="/#search">Поиск</a></li>
+            <li><a href="/register.html">Регистрация</a></li>
+            <li><a href="/login.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="px-5 py-10 overflow-auto grow sm:px-10 md:px-20">
+        <div class="flex flex-col gap-8 mx-auto container-xs">
+          <div class="text-3xl font-bold sm:text-4xl">Результаты поиска</div>
+          <div class="flex flex-col gap-5">
+            <article
+              class="flex flex-col overflow-hidden rounded-lg shadow-lg cursor-pointer bg-slate-50 md:flex-row hover:shadow-xl group/result"
+              onclick="goBooking()"
+            >
+              <div
+                class="relative overflow-hidden md:w-2/3 from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50 group-hover/result:w-3/5 group/car"
+              >
+                <div id="card-meta_1" class="hidden card-meta">
+                  <div class="brand">Kia</div>
+                  <div class="model">Rio</div>
+                </div>
+                <div
+                  id="bg-card_1"
+                  class="absolute opacity-0 group-hover/result:opacity-100 whitespace-nowrap overflow-hidden uppercase font-black text-5xl italic text-slate-800 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 group-hover/car:!text-slate-700"
+                ></div>
+                <div
+                  class="relative flex flex-col justify-between h-full gap-2 px-3 py-2 sm:items-center sm:flex-row lg:px-6 lg:py-4"
+                >
+                  <div class="flex items-center gap-5">
+                    <div class="flex flex-col items-center">
+                      <img
+                        class="w-16"
+                        src="./assets/imgs/cars/kia__rio.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="text-xl whitespace-nowrap">
+                        <span class="font-bold">Kia</span>
+                        <span class="font-medium">Rio</span>
+                      </div>
+                      <div class="text-lg">Эконом</div>
+                    </div>
+                  </div>
+                  <div class="flex gap-x-4 sm:flex-col">
+                    <div class="flex items-center gap-2">
+                      <i class="w-4 fa-solid fa-calendar"></i>
+                      <div class="text-lg">03.02.2023</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="w-4 fa-solid fa-clock"></i>
+                      <div class="text-lg">10:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center px-2 py-3 lg:px-4 lg:py-6 grow bg-slate-50"
+              >
+                <div class="text-2xl">
+                  <span class="font-bold">1000</span> ₽
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="flex w-3 h-3 bg-green-500 rounded-full"></span>
+                  85%
+                </div>
+              </div>
+            </article>
+            <article
+              class="flex flex-col overflow-hidden rounded-lg shadow-lg cursor-pointer bg-slate-50 md:flex-row hover:shadow-xl group/result"
+              onclick="goBooking()"
+            >
+              <div
+                class="relative overflow-hidden md:w-2/3 from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50 group-hover/result:w-3/5 group/car"
+              >
+                <div id="card-meta_2" class="hidden card-meta">
+                  <div class="brand">Volkswagen</div>
+                  <div class="model">Polo</div>
+                </div>
+                <div
+                  id="bg-card_2"
+                  class="absolute opacity-0 group-hover/result:opacity-100 whitespace-nowrap overflow-hidden uppercase font-black text-5xl italic text-slate-800 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 group-hover/car:!text-slate-700"
+                ></div>
+                <div
+                  class="relative flex flex-col justify-between h-full gap-2 px-3 py-2 sm:items-center sm:flex-row lg:px-6 lg:py-4"
+                >
+                  <div class="flex items-center gap-5">
+                    <div class="flex flex-col items-center">
+                      <img
+                        class="w-16"
+                        src="./assets/imgs/cars/volkswagen__polo.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="text-xl whitespace-nowrap">
+                        <span class="font-bold">Volkswagen</span>
+                        <span class="font-medium">Polo</span>
+                      </div>
+                      <div class="text-lg">Эконом+</div>
+                    </div>
+                  </div>
+                  <div class="flex gap-x-4 sm:flex-col">
+                    <div class="flex items-center gap-2">
+                      <i class="w-4 fa-solid fa-calendar"></i>
+                      <div class="text-lg">03.02.2023</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="w-4 fa-solid fa-clock"></i>
+                      <div class="text-lg">10:30</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center px-2 py-3 lg:px-4 lg:py-6 grow bg-slate-50"
+              >
+                <div class="text-2xl">
+                  <span class="font-bold">1000</span> ₽
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="flex w-3 h-3 bg-yellow-500 rounded-full"></span>
+                  45%
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

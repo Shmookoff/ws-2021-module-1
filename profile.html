@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script defer src="./assets/fontawesome/js/solid.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
+    <script defer src="./assets/js/card-bg.js"></script>
+    <script defer src="./assets/js/profile.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen bg-slate-200 text-slate-900">
+      <header class="bg-slate-50">
+        <div
+          class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
+        >
+          <a href="/">
+            <img
+              class="h-4 md:h-6"
+              src="./assets/imgs/icons/logo-dark.svg"
+              alt="Logo"
+            />
+          </a>
+          <ul class="hidden gap-5 sm:flex">
+            <li><a href="/#promos">Акции</a></li>
+            <li><a href="/#search">Поиск</a></li>
+            <li><a href="/register.html">Регистрация</a></li>
+            <li><a href="/login.html">Личный кабинет</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="px-5 py-10 overflow-auto grow sm:px-10 md:px-20">
+        <div class="flex flex-col gap-8 mx-auto container-xs">
+          <div class="text-3xl font-bold sm:text-4xl">Профиль</div>
+          <div class="flex flex-col gap-5 p-5 rounded-md shadow-lg bg-slate-50">
+            <div class="text-2xl font-medium">
+              <span>Дмитрий</span>
+              <span>Матвеев</span>
+            </div>
+            <div
+              class="flex flex-col gap-5 p-5 overflow-hidden rounded-md shadow-lg sm:flex-row justify-evenly hover:shadow-xl from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50"
+            >
+              <div
+                class="flex flex-col items-center justify-center text-center sm:gap-2"
+              >
+                <div class="text-2xl font-bold sm:text-4xl">25</div>
+                <div class="text-sm">Количество бронирований</div>
+              </div>
+              <hr />
+              <div
+                class="flex flex-col items-center justify-center text-center sm:gap-2"
+              >
+                <div class="text-2xl font-bold sm:text-4xl">2000</div>
+                <div class="text-sm">Количество бонусных баллов</div>
+              </div>
+            </div>
+            <button
+              onclick="goIndex()"
+              class="relative overflow-hidden rounded-md h-min text-slate-50 group/button"
+            >
+              <div
+                class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+              ></div>
+              <div
+                class="absolute w-full h-full opacity-0 bg-slate-50 group-hover/button:opacity-10"
+              ></div>
+              <div class="relative px-3 py-2">Выход</div>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
