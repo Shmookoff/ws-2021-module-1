@@ -9,16 +9,15 @@
     <script defer src="./assets/fontawesome/js/solid.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
     <script defer src="./assets/js/card-bg.js"></script>
-    <script defer src="./assets/js/booking_management.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <div class="flex flex-col min-h-screen bg-slate-200">
+    <div class="flex flex-col h-screen bg-slate-200">
       <header class="bg-slate-50">
         <div
           class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
         >
-          <a href="/">
+          <a href="index.html">
             <img
               class="h-4 md:h-6"
               src="./assets/imgs/icons/logo-dark.svg"
@@ -26,134 +25,139 @@
             />
           </a>
           <ul class="hidden gap-5 sm:flex">
-            <li><a href="/#promos">Акции</a></li>
-            <li><a href="/#search">Поиск</a></li>
-            <li><a href="/register.html">Регистрация</a></li>
-            <li><a href="/login.html">Личный кабинет</a></li>
+            <li><a href="index.html#promos">Акции</a></li>
+            <li><a href="index.html#search">Поиск</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+            <li><a href="login.html">Личный кабинет</a></li>
           </ul>
         </div>
       </header>
-      <main class="px-5 py-10 overflow-auto grow sm:px-10 md:px-20">
-        <div class="flex flex-col h-full gap-8 mx-auto container-xs">
-          <div class="text-3xl font-bold sm:text-4xl">
-            Управление бронированием
-          </div>
-          <div class="grid gap-5 md:grid-cols-3">
-            <article
-              class="flex flex-col col-span-3 gap-4 p-3 rounded-lg shadow-lg sm:flex-row justify-evenly md:col-span-1 bg-slate-50 hover:shadow-xl md:flex-col"
-            >
-              <div
-                class="flex flex-col items-center justify-center text-center sm:gap-2"
+      <main class="overflow-auto grow">
+        <div class="px-5 py-10 sm:px-10 pd:px-20">
+          <div class="flex flex-col gap-8 mx-auto container-xs">
+            <div class="text-3xl font-bold sm:text-4xl">
+              Управление бронированием
+            </div>
+            <div class="grid gap-5 md:grid-cols-3">
+              <article
+                class="flex flex-col col-span-3 gap-4 p-3 rounded-lg shadow-lg sm:flex-row justify-evenly md:col-span-1 bg-slate-50 hover:shadow-xl md:flex-col"
               >
-                <div class="text-2xl font-bold sm:text-4xl">MASFX</div>
-                <div class="text-sm">Код бронирования</div>
-              </div>
-              <hr />
-              <div
-                class="flex flex-col items-center justify-center text-center sm:gap-2"
-              >
-                <div class="text-2xl sm:text-4xl">
-                  <span class="font-bold">1000</span> ₽
-                </div>
-                <div class="text-sm">Финальная стоимость бронирования</div>
-              </div>
-            </article>
-            <article
-              class="relative flex col-span-3 rounded-lg shadow-lg md:col-span-2 bg-slate-50 hover:shadow-xl group/result"
-            >
-              <div
-                class="absolute z-10 flex items-center gap-2 px-2 py-1 -m-2 rounded-xl bg-slate-50"
-              >
-                <span class="flex w-3 h-3 bg-green-500 rounded-full"></span>
-                85%
-              </div>
-              <div
-                class="relative w-full overflow-hidden rounded-lg from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50 group/car"
-              >
-                <div id="card-meta_1" class="hidden card-meta">
-                  <div class="brand">Volkswagen</div>
-                  <div class="model">Polo</div>
-                </div>
                 <div
-                  id="bg-card_1"
-                  class="absolute text-5xl italic font-black uppercase -rotate-45 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover/result:opacity-100 whitespace-nowrap text-slate-800 top-1/2 left-1/2"
-                ></div>
-                <div
-                  class="relative flex flex-col items-center h-full gap-2 px-6 py-4 justify-evenly xl:justify-between xl:flex-row lg:px-10 lg:py-14"
+                  class="flex flex-col items-center justify-center text-center sm:gap-2"
                 >
-                  <div class="flex items-center gap-5">
-                    <div class="flex flex-col items-center">
-                      <img
-                        class="w-32"
-                        src="./assets/imgs/cars/kia__rio.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <div class="text-xl whitespace-nowrap">
-                        <span class="font-bold">Volkswagen</span>
-                        <span class="font-medium">Polo</span>
-                      </div>
-                      <div class="text-lg">Эконом</div>
-                    </div>
+                  <div class="text-2xl font-bold sm:text-4xl">MASFX</div>
+                  <div class="text-sm">Код бронирования</div>
+                </div>
+                <hr />
+                <div
+                  class="flex flex-col items-center justify-center text-center sm:gap-2"
+                >
+                  <div class="text-2xl sm:text-4xl">
+                    <span class="font-bold">1000</span> ₽
                   </div>
-                  <div class="flex gap-x-4 xl:flex-col">
-                    <div class="flex items-center gap-2">
-                      <i class="w-4 fa-solid fa-calendar"></i>
-                      <div class="text-lg">03.02.2023</div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <i class="w-4 fa-solid fa-clock"></i>
-                      <div class="text-lg">10:30</div>
-                    </div>
-                  </div>
+                  <div class="text-sm">Финальная стоимость бронирования</div>
                 </div>
-              </div>
-            </article>
-            <article
-              class="col-span-3 p-5 rounded-lg shadow-lg lg:col-span-2 bg-slate-50 hover:shadow-xl"
-            >
-              <div class="grid items-end grid-cols-1 gap-4 md:grid-cols-2">
-                <div class="flex flex-col gap-2">
-                  <div class="text-sm" for="first-name">Имя</div>
-                  <div class="text-xl font-medium">Иван</div>
-                </div>
-                <div class="flex flex-col gap-2">
-                  <div class="text-sm" for="last-name">Фамилия</div>
-                  <div class="text-xl font-medium">Иванов</div>
-                </div>
-                <div class="flex flex-col gap-2">
-                  <div class="text-sm" for="birth-date">Дата рождения</div>
-                  <div class="text-xl font-medium">10.01.2001</div>
-                </div>
-                <div class="flex flex-col gap-2">
-                  <div class="text-sm" for="driver-license">
-                    Номер водительского удостоверения
-                  </div>
-                  <div class="text-xl font-medium">0123456789</div>
-                </div>
-              </div>
-            </article>
-            <article
-              class="relative col-span-3 overflow-hidden rounded-lg shadow-lg cursor-pointer lg:col-span-1 hover:shadow-xl group text-slate-50"
-            >
-              <div
-                class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
-              ></div>
-              <div
-                class="absolute w-full h-full opacity-0 group-hover:opacity-100 to-slate-800 from-slate-700 bg-gradient-to-br"
-              ></div>
-
-              <div
-                onclick="goSeat()"
-                class="relative flex flex-row-reverse items-center justify-center h-full p-5 gap-x-4 gap-y-2 lg:flex-col"
+              </article>
+              <article
+                class="relative flex col-span-3 rounded-lg shadow-lg md:col-span-2 bg-slate-50 hover:shadow-xl group/result"
               >
-                <i class="text-2xl lg:text-7xl fa-solid fa-chevron-right"></i>
-                <div class="text-xl font-medium text-center">
-                  Выбрать автомобиль
+                <div
+                  class="absolute z-10 flex items-center gap-2 px-2 py-1 -m-2 rounded-xl bg-slate-50"
+                >
+                  <span class="flex w-3 h-3 bg-green-500 rounded-full"></span>
+                  85%
                 </div>
-              </div>
-            </article>
+                <div
+                  class="relative w-full overflow-hidden rounded-lg from-slate-800 to-slate-900 bg-gradient-to-br text-slate-50 group/car"
+                >
+                  <div id="card-meta_1" class="hidden card-meta">
+                    <div class="brand">Volkswagen</div>
+                    <div class="model">Polo</div>
+                  </div>
+                  <div
+                    id="bg-card_1"
+                    class="absolute text-5xl italic font-black uppercase -rotate-45 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover/result:opacity-100 whitespace-nowrap text-slate-800 top-1/2 left-1/2"
+                  ></div>
+                  <div
+                    class="relative flex flex-col items-center h-full gap-2 px-6 py-4 justify-evenly xl:justify-between xl:flex-row lg:px-10 lg:py-14"
+                  >
+                    <div class="flex items-center gap-5">
+                      <div class="flex flex-col items-center">
+                        <img
+                          class="w-32"
+                          src="./assets/imgs/cars/kia__rio.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="text-xl whitespace-nowrap">
+                          <span class="font-bold">Volkswagen</span>
+                          <span class="font-medium">Polo</span>
+                        </div>
+                        <div class="text-lg">Эконом</div>
+                      </div>
+                    </div>
+                    <div class="flex gap-x-4 xl:flex-col">
+                      <div class="flex items-center gap-2">
+                        <i class="w-4 fa-solid fa-calendar"></i>
+                        <div class="text-lg">03.02.2023</div>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <i class="w-4 fa-solid fa-clock"></i>
+                        <div class="text-lg">10:30</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="col-span-3 p-5 rounded-lg shadow-lg lg:col-span-2 bg-slate-50 hover:shadow-xl"
+              >
+                <div class="grid items-end grid-cols-1 gap-4 md:grid-cols-2">
+                  <div class="flex flex-col gap-2">
+                    <div class="text-sm" for="first-name">Имя</div>
+                    <div class="text-xl font-medium">Иван</div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="text-sm" for="last-name">Фамилия</div>
+                    <div class="text-xl font-medium">Иванов</div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="text-sm" for="birth-date">Дата рождения</div>
+                    <div class="text-xl font-medium">10.01.2001</div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="text-sm" for="driver-license">
+                      Номер водительского удостоверения
+                    </div>
+                    <div class="text-xl font-medium">0123456789</div>
+                  </div>
+                </div>
+              </article>
+              <a href="seat.html" class="col-span-3 lg:col-span-1">
+                <article
+                  class="relative w-full h-full overflow-hidden rounded-lg shadow-lg cursor-pointer hover:shadow-xl group text-slate-50"
+                >
+                  <div
+                    class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                  ></div>
+                  <div
+                    class="absolute w-full h-full opacity-0 group-hover:opacity-100 to-slate-800 from-slate-700 bg-gradient-to-br"
+                  ></div>
+
+                  <div
+                    class="relative flex flex-row-reverse items-center justify-center h-full p-5 gap-x-4 gap-y-2 lg:flex-col"
+                  >
+                    <i
+                      class="text-2xl lg:text-7xl fa-solid fa-chevron-right"
+                    ></i>
+                    <div class="text-xl font-medium text-center">
+                      Выбрать автомобиль
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </div>
           </div>
         </div>
       </main>

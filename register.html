@@ -10,7 +10,6 @@
     <script defer src="./assets/fontawesome/js/solid.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.js"></script>
     <script defer src="./assets/js/card-bg.js"></script>
-    <script defer src="./assets/js/seat.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
         <div
           class="container flex items-center justify-between px-6 py-3 mx-auto md:py-6 md:px-12"
         >
-          <a href="/">
+          <a href="index.html">
             <img
               class="h-4 md:h-6"
               src="./assets/imgs/icons/logo-dark.svg"
@@ -27,10 +26,10 @@
             />
           </a>
           <ul class="hidden gap-5 sm:flex">
-            <li><a href="/#promos">Акции</a></li>
-            <li><a href="/#search">Поиск</a></li>
-            <li><a href="/register.html">Регистрация</a></li>
-            <li><a href="/login.html">Личный кабинет</a></li>
+            <li><a href="index.html#promos">Акции</a></li>
+            <li><a href="index.html#search">Поиск</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+            <li><a href="login.html">Личный кабинет</a></li>
           </ul>
         </div>
       </header>
@@ -106,19 +105,23 @@
                     id="password-check"
                   />
                 </div>
-                <button class="relative overflow-hidden rounded-md group">
-                  <div
-                    class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
-                  ></div>
-                  <div
-                    class="absolute w-full h-full opacity-0 group-hover:opacity-100 from-slate-700 to-slate-800 bg-gradient-to-br"
-                  ></div>
-                  <div
-                    class="relative px-3 py-2 text-lg font-medium text-slate-50"
+                <a href="login.html">
+                  <button
+                    class="relative w-full overflow-hidden rounded-md group"
                   >
-                    Зарегистрироваться
-                  </div>
-                </button>
+                    <div
+                      class="absolute w-full h-full from-slate-800 to-slate-900 bg-gradient-to-br"
+                    ></div>
+                    <div
+                      class="absolute w-full h-full opacity-0 group-hover:opacity-100 from-slate-700 to-slate-800 bg-gradient-to-br"
+                    ></div>
+                    <div
+                      class="relative px-3 py-2 text-lg font-medium text-slate-50"
+                    >
+                      Зарегистрироваться
+                    </div>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
